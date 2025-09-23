@@ -7,7 +7,6 @@ Fixed::Fixed() : _value(0)
     printf("ADDRES [%p] \n", (void*)this);
     std :: cout << "Default constructor called" << std :: endl;
 }
-
 // Int constructor
 Fixed::Fixed(const int value) 
 {
@@ -15,7 +14,6 @@ Fixed::Fixed(const int value)
     std :: cout << "Int constructor called" << std :: endl;
     _value = value << _fractionalBits;
 }
-
 // Float constructor
 Fixed::Fixed(const float value) 
 {
@@ -67,7 +65,8 @@ float Fixed::toFloat(void) const
 }
 
 // Convert to int
-int Fixed::toInt(void) const {
+int Fixed::toInt(void) const 
+{
     return _value >> _fractionalBits;
 }
 

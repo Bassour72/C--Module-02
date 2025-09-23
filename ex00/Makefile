@@ -1,5 +1,5 @@
-CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CC = c++
+CCFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = Fixed
 
@@ -11,11 +11,11 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CCFLAGS) $(OBJS) -o $(NAME)
 
 
 %.o: %.cpp Fixed.hpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)

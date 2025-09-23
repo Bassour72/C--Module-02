@@ -24,8 +24,14 @@ int Fixed::getRawBits(void) const { return _value; }
 void Fixed::setRawBits(int const raw) { _value = raw; }
 
 // ----------------- Conversion -----------------
-float Fixed::toFloat(void) const { return (float)_value / (1 << _fractionalBits); }
-int Fixed::toInt(void) const { return _value >> _fractionalBits; }
+float Fixed::toFloat(void) const 
+{ 
+    return (float)_value / (1 << _fractionalBits); 
+}
+int Fixed::toInt(void) const 
+{ 
+    return _value >> _fractionalBits; 
+}
 
 // ----------------- Comparison operators -----------------
 bool Fixed::operator<(const Fixed &other) const { return _value < other._value; }
@@ -76,20 +82,26 @@ Fixed Fixed::operator/(const Fixed &other) const
 // Prefix
 Fixed &Fixed::operator++() 
 { 
-    ++_value; return *this; 
+    ++_value; 
+    return *this; 
 }
 Fixed &Fixed::operator--() 
 { 
-    --_value; return *this; 
+    --_value; 
+    return *this; 
 }
 // Postfix
 Fixed Fixed::operator++(int) 
 { 
-    Fixed temp(*this); ++_value; return temp; 
+    Fixed temp(*this);
+    ++_value; 
+    return temp; 
 }
 Fixed Fixed::operator--(int) 
 { 
-    Fixed temp(*this); --_value; return temp; 
+    Fixed temp(*this); 
+    --_value; 
+    return temp; 
 }
 
 // ----------------- Min / Max -----------------

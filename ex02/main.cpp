@@ -1,6 +1,7 @@
 #include "Fixed.hpp"
 
-int main( void ) {
+int main( void ) 
+{
     Fixed a;
     Fixed C(10);
     Fixed D(0);
