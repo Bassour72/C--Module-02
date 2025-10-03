@@ -1,7 +1,7 @@
 CC = c++
 CCFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Fixed
+NAME = BSP
 
 SRCS = main.cpp Fixed.cpp bsp.cpp Point.cpp
 
@@ -24,4 +24,4 @@ fclean: clean
 	rm -f $(NAME)
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean

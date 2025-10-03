@@ -7,9 +7,8 @@ Point::Point(const float a, const float b) : x(a), y(b) {}
 
 Point::Point(const Point &other) : x(other.x), y(other.y) {}
 
-// copy assignment operator cannot be implemented because x and y are const
- Point &Point::operator=(const Point &other) 
- { 
+Point &Point::operator=(const Point &other) 
+{ 
     (void)other;
     return *this; 
 }

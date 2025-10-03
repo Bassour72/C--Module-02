@@ -1,9 +1,8 @@
 #include "Fixed.hpp"
 
-Fixed::Fixed(/* args */)
+Fixed::Fixed(/* args */):_value(0)
 {
     std :: cout << "Default constructor called" << std :: endl;
-    _value = 0;
 }
 
 Fixed::Fixed(const Fixed& other)
@@ -20,7 +19,7 @@ Fixed::~Fixed()
 Fixed&   Fixed::operator=(const Fixed& other)
 {
     std :: cout << "Copy assignment operator called"<< std :: endl;
-    this->_value = other.getRawBits(); // Check why this work  this->_value = other._v
+    _value = other.getRawBits();
     return (*this);
 }
 
